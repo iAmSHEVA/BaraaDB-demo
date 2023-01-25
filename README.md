@@ -1,6 +1,4 @@
 # BaraaDB-demo
-To-do list program using database
+To-do list program with using database
 
-Remove the hardcoded database credentials using two environment variables:
-  -DB_user
-  -DB_pass
+Include: 1.Remove the hardcoded database credentials using environment variables. 2.Update method. 3.Delete method.
