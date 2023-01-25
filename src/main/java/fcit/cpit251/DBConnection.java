@@ -18,8 +18,10 @@ public class DBConnection {
         this.port = 5432;
         this.url = "jdbc:postgresql://localhost:" + Integer.toString(this.port) + "/" + this.dbName;
         Properties props = new Properties();
-        props.setProperty("user", "postgres");
-        props.setProperty("password", "baraa");
+        String db_user = System.getenv("DB_user");
+        String db_pass = System.getenv("DB_pass");
+        props.setProperty("user", db_user);
+        props.setProperty("password", db_pass);
         props.setProperty("ssl", "false");
         this.connection = DriverManager.getConnection(url, props);
     }
